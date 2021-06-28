@@ -1,0 +1,38 @@
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col s10 m6 push-s1 push-m3">
+                <form action="./addUser" method="POST">
+                    <div class="input-field col s12">
+                        <input id="nome" name="nome" type="text">
+                        <label for="nome">Seu Nome</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="email" name="email" type="text">
+                        <label for="email">Seu E-mail</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="telefone" name="telefone" maxlength="9" type="tel">
+                        <label for="telefone">Seu Telefone</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="endereco" name="endereco" type="text" placeholder="Município, Distrito ou Avenida">
+                        <label for="endereco">Seu Endereço</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="senha" name="senha" type="password">
+                        <label for="senha">Sua Senha</label>
+                    </div>
+                    <br><br>
+                    <div class="input-field col s12">
+                        <input id="confirmaSenha" name="confirmaSenha" type="password">
+                        <label for="confirmaSenha">Confirme sua Senha</label>
+                    </div>
+                    <div class="col s12">
+                    <button class="btn w-100 green" type="submit">Cadastrar-me</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

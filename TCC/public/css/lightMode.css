@@ -1,0 +1,48 @@
+* {
+    transition: .3s ease-in;
+}
+
+body {
+    background-color: var(--bg-color-light);
+}
+
+.fixed {
+    background-color: var(--color-primary);
+}
+
+i {
+    color: var(--bg-color-light) !important;
+}
+
+#nameUser, #tituloCategoria, #descricaoCategoria {
+    color: var(--bg-color-dark) !important;
+}
+
+.card-title>i.uping {
+    color: var(--bg-color-dark) !important;
+}
+
+i#icon.uping {
+    color: var(--color-light) !important;
+}
+
+.bg-destaque {
+    background-color: var(--color-destaque) !important;
+    color: var(--color-light);
+}
+
+#appendCategoria>div>.card>.card-content, .card-content, .card-reveal {
+    background-color: var(--bg-color-light) !important;
+    color: var(--bg-color-dark) !important;
+}
+
+.autocomplete-content.dropdown-content, .autocomplete-content.dropdown-content:hover, .card-image {
+    background-color: var(--bg-color-light);
+}
+
+.autocomplete-content.dropdown-content>li>span {
+    color: var(--color-primary);
+}
+
+
+/* SELADO */

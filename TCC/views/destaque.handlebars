@@ -1,0 +1,73 @@
+<main>
+    <div class="container">
+        <div class="search row">
+            <div class="input-field col s8 push-m1">
+                <input id="inputSearch" name="inSearch" class="autocomplete" type="search" _disabled>
+                <label style="color: var(--color-primary)" for="inputSearch">Pesquise Produtos aqui</label>
+            </div>
+            <div class="input-field col s4 push-m1">
+                <a id="btnSearch" href="#" class="btn" _disabled><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+        <div id="appendDestaque" class="row">
+            
+            <a href="admin/cadastroProd">
+                <div class="col s10 m5 l4 push-s1 push-m1">
+                    <div class="card card-prod">
+                        <div class="card-image waves-effect waves-block center">
+                            <img class="activator" src="../img/icones/2.png">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title activator center">
+                                Adicionar Produto
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            {{#each produtos}}
+            <div class="col s10 m5 l4 push-s1 push-m1">
+                <div class="card card-prod">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./img/produtos/{{img}}">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">
+                            <a class="btn-floating btn red r-45deg right waves-effect" href="/admin/deletarProd/{{id}}">
+                                <i class="fas fa-plus"></i>
+                            </a>
+                            <a class="btn-floating btn orange darken-3 right waves-effect" href="/admin/editProd/{{id}}" class="btn">
+                                <i class="fas fa-pen"></i>
+                            </a>
+                            {{nome}}
+                        </h4>
+                    </div>
+                    <div class="card-btn">
+                        <a href="/addProdCarrinho/{{id}}" class="btn green waves-effect" style="width: 100%">
+                            <i class="fas fa-cart-plus"></i>
+                        </a>
+                    </div>
+
+                    <div class="card-reveal">
+                        <span class="card-title">
+                            <p>{{nome}}</p>
+                            <i class="uping fas fa-angle-down right"></i>
+                        </span>
+                        <br> <br>
+                        <p>
+                            <span class="preco green-text">
+                                {{preco}}Kz
+                            </span>
+                        </p>
+                        <br><br>
+                        <p>{{descricao}}</p>
+                    </div>
+                </div>
+            </div>
+            {{else}}
+            <p>Sem Produtos</p>
+            {{/each}}
+        </div>
+    </div>
+</main>

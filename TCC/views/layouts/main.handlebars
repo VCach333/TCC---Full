@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassolucas</title>
+    <link rel="shortcut icon" href="/img/logo/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link id="linkAdjustMode" rel="stylesheet" href="/css/lightMode.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+</head>
+
+<body onload="initFunc()">
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper container">
+                <a href="/" class="brand-logo">
+                    <img class="logo" src="/img/logo/favicon.png" alt="Cassolucas">
+                </a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/">Casa</a></li>
+                    <li><a href="/destaque">Destaque</a></li>
+                    <li><a href="/categorias">Categoria</a></li>
+                    <li><a href="/perfil">Perfil</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="/">Casa</a></li>
+                    <li><a href="/destaque">Destaque</a></li>
+                    <li><a href="/categorias">Categoria</a></li>
+                    <li><a href="/perfil">Perfil</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                    <div class="card card-user hide-on-large-only">
+                        <div class="card-image">
+                            <img id="imgUser" src="../img/user/userDefault.png">
+                        </div>
+                        <div class="card-content">
+                            <span id="nameUser" class="card-title">João <span>António</span>
+                        </div>
+                        <div class="card-btn">
+                            <a class="btn btn-large waves-effect red">Sair</a>
+                            <a class="btn btn-large waves-effect red">Sair</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        {{#if error}}
+            <div class="error_msg red lighten-1">{{error}}</div>
+        {{else}}
+        {{/if}}
+        {{>_msg}}
+    </div>
+    
+    {{{body}}}
+
+    <section>
+        <div class="fixed-action-btn click-to-toggle" style="bottom: 40px; right: 0;">
+            <a id="btnFixed" class="btn-floating btn-large">
+                <i id="icon" class="uping fas fa-angle-up"></i>
+            </a>
+            <ul>
+                <li><a href="/" class="btn-floating waves-effect"><i class="fas fa-home"></i></a></li>
+                <li><a href="/destaque" class="btn-floating waves-effect"><i class="fas fa-fire"></i></a></li>
+                <li><a href="/categorias" class="btn-floating waves-effect"><i class="fas fa-code-branch"></i></a></li>
+                <li><a href="/perfil" class="btn-floating waves-effect"><i class="fas fa-user"></i></a></li>
+                <li><a href="/sobre" class="btn-floating waves-effect"><i class="fas fa-question"></i></a></li>
+                <li><a id="btnAdjustMode" class="btn-floating waves-effect"><i class="fas fa-adjust"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="hide-on-large-only">
+        <div id="fixed"></div>
+    </section>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">CASSOLUCAS</h5>
+                    <p class="grey-text text-lighten-4">
+                        Comércio Geral e Prestação de Serviços. Importação e Exportação, Lda
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2021 CASSOLUCAS Lda
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/materialize/js/materialize.min.js"></script>
+    <script src="/js/init.js"></script>
+    <script src="/js/objects.js"></script>
+</body>
+
+</html>
